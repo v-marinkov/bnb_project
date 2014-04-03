@@ -52,4 +52,35 @@ In order of preference:
 \item Introduce distortionary taxes on labour and capital income.
 \item Allow for tax evasion on the side of the HHs
 \end{enumerate}
+
+\section{Questions for discussion}
+
+\begin{enumerate}
+\item Does ``workers in the public sector can spend a portion $ e_t $ of their working time...'' mean that $e_t \in [0,1]$?
+\item Why does the household's budget constraint contain the term $ (1-\delta^p)k^p_t $?
+\item Can we verify that $ \rho(e_t) \in [0,1] $?
+\item Public sector specification
+
+My understanding of the setup in conceptual terms is summarized in the following table (am I missing something?):
+
+\begin{tabular}{l|l}
+\hline
+Potential revenues & Expenditures \\ \hline
+Sales of public goods & Public investment \\
+Lump sum tax & Public sector wages \\
+{} & Auditing expenditures
+\end{tabular}
+
+If the above is correct, there are two issues:
+\begin{itemize}
+\item Revenues
+
+Ideally, the government gets $ p^g_t g_t + T_t $. This can be written as \[  p^g_t g_t + (1-\bar{\rho}) T_t + \bar{\rho} T_t. \] One can probably assume that the revenue part $p^g_t g_t$ is not ``up for grabs'' (though it has to be justified), while a part of the lump sum tax revenues can be subject to embezzlement efforts. Even if, for some reason, this part is $ TR_t = (1-\bar{\rho}) T_t $ and actual revenues from that part are equal to $ (1-l(e_t n_t^g))(1-\bar{\rho}) T_t $, the residual $ \bar{\rho} T_t $ still seems to be missing from the budget identity. Any explanation/intuition for that?
+\item If workers get $ w^g_t (1-\rho(e_t))n^g_t $ from the government, isn't it logical to have the same amount as government expenditures instead of $ w_t^g n_t^g $? Otherwise the government discovers embezzlers but still pays them.
+\end{itemize}
+\item FDI
+
+Assuming nonzero values of $ g_t $ and $ y_t $ in equilibrium, say $ \bar{g} $ and $ \bar{y} $, the steady state value of $ i^f_t $ will be $ \bar{i}^f + \gamma \left(\frac{\bar{g}}{\bar{y}}\right)^{\psi} $, not $ \bar{i}^f $.
+\end{enumerate}
+
 \end{document}
