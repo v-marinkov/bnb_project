@@ -61,6 +61,7 @@ In order of preference:
 
 \begin{enumerate}
 \item Does ``workers in the public sector can spend a portion $ e_t $ of their working time...'' mean that $e_t \in [0,1]$?
+<<<<<<< HEAD
 \begin{itemize}
 \item \textcolor{blue}{\textit{Yes (added)}}
 \end{itemize}
@@ -72,6 +73,10 @@ In order of preference:
 \begin{itemize}
 \item \textcolor{blue}{\textit{Good point. It is fixed now.\\ Since the auditing parameter $ \bar{\rho} $ will be varied exogenously, it makes no sense to have taxes (through $ a_t $) in the discovery probability $ \rho(e_t) $. Thus the latter becomes $ \rho(e_t)=\bar{\rho}e_t^2~\in[0,1] $. Again, the auditing expenditures $ a_t $ are assumed to be absorbed by the discovery probability and have no other general equilibrium effects (i.e. they are part of the government consumption that is "thrown in the ocean")}}
 \end{itemize}
+=======
+\item Why does the household's budget constraint contain the term $ (1-\delta^p)k^p_t $?
+\item Can we verify that $ \rho(e_t) \in [0,1] $?
+>>>>>>> dfe90da6d952a746738ae28b86bbe982aa74b763
 \item Public sector specification
 
 My understanding of the setup in conceptual terms is summarized in the following table (am I missing something?):
@@ -88,6 +93,7 @@ If the above is correct, there are two issues:
 \begin{itemize}
 \item Revenues
 
+<<<<<<< HEAD
 Ideally, the government gets $ p^g_t g_t + T_t $. This can be written as \[  p^g_t g_t + (1-\bar{\rho}) T_t + \bar{\rho} T_t. \] One can probably assume that the revenue part $p^g_t g_t$ is not ``up for grabs'' (\textbf{though it has to be justified} - \textit{\textcolor{blue}{I agree!}}), while a part of the lump sum tax revenues can be subject to embezzlement efforts. Even if, for some reason, this part is $ TR_t = (1-\bar{\rho}) T_t $ and actual revenues from that part are equal to $ (1-l(e_t n_t^g))(1-\bar{\rho}) T_t $, the residual $ \bar{\rho} T_t $ still seems to be missing from the budget identity. Any explanation/intuition for that?
 \begin{itemize}
 \item \textit{\textcolor{blue}{In the critiqued version, the assumption of the timing was that the government receives $ T $ in taxes, $ a_t=\bar{\rho}T $ of which are directly allocated to auditing (before corruption is realized). After auditing and embezzlement the net tax income is $ (1-l(e_t n_t^g))(1-\bar{\rho}) T_t $. The auditing expenditures are absorbed by the auditing procedure itself which influences the probability of exposure of corrupt public workers $ \rightarrow \rho(e_t)=\bar{\rho}e_t^2$. That is, they exit the resource part of the economy.}}
@@ -100,13 +106,20 @@ Ideally, the government gets $ p^g_t g_t + T_t $. This can be written as \[  p^g
 \item \textcolor{blue}{\textit{In fact, introducing $ w^g_t (1-\rho(e_t))n^g_t $ in the government budget constraint may result in more interesting role for the auditing effectiveness parameter $ \bar{\rho} $, since $ \frac{\partial a_t}{\partial \bar{\rho}}\geq 0 $ but $ \frac{\partial w^g_t (1-\rho(e_t))n^g_t}{\partial \bar{\rho}}\leq0 $, hence introducing a trade-off.}}
 \end{itemize}
 
+=======
+Ideally, the government gets $ p^g_t g_t + T_t $. This can be written as \[  p^g_t g_t + (1-\bar{\rho}) T_t + \bar{\rho} T_t. \] One can probably assume that the revenue part $p^g_t g_t$ is not ``up for grabs'' (though it has to be justified), while a part of the lump sum tax revenues can be subject to embezzlement efforts. Even if, for some reason, this part is $ TR_t = (1-\bar{\rho}) T_t $ and actual revenues from that part are equal to $ (1-l(e_t n_t^g))(1-\bar{\rho}) T_t $, the residual $ \bar{\rho} T_t $ still seems to be missing from the budget identity. Any explanation/intuition for that?
+\item If workers get $ w^g_t (1-\rho(e_t))n^g_t $ from the government, isn't it logical to have the same amount as government expenditures instead of $ w_t^g n_t^g $? Otherwise the government discovers embezzlers but still pays them.
+>>>>>>> dfe90da6d952a746738ae28b86bbe982aa74b763
 \end{itemize}
 \item FDI
 
 Assuming nonzero values of $ g_t $ and $ y_t $ in equilibrium, say $ \bar{g} $ and $ \bar{y} $, the steady state value of $ i^f_t $ will be $ \bar{i}^f + \gamma \left(\frac{\bar{g}}{\bar{y}}\right)^{\psi} $, not $ \bar{i}^f $.
+<<<<<<< HEAD
 \begin{itemize}
 \item \textcolor{blue}{\textit{True, it was a poor expression. This term is meant as an exogenous drift term that does not depend on the domestic public sector.}}
 \end{itemize}
+=======
+>>>>>>> dfe90da6d952a746738ae28b86bbe982aa74b763
 \end{enumerate}
 
 \end{document}
