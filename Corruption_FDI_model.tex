@@ -16,16 +16,16 @@
 \section{Households}
 \begin{align}
 \max_{c_t,i^p_t,n_t,e_t}&\left\lbrace \sum_{t=0}^{\infty}\beta^t\left[ \frac{c_t^{1-\eta}}{1-\eta}+\phi\frac{(1-n_t)^{1-\varphi}}{1-\varphi} \right] \right\rbrace \qquad\text{s.t.}\\
-c_t+i^p_t&\leq \left( r^p_t+(1-\delta^p) \right)k^p_t +w^p_t n_t^p+\underbrace{w^g_t (1-\rho(e_t))n^g_t}_{\textrm{\parbox{1.1in}{\shortstack{net pay earned in\\public sector}}}}+\underbrace{\left( exp\left\lbrace \bar{l}e_tn^g_t \right\rbrace-1 \right)}_{\textrm{\parbox{1.1in}{\shortstack{portion of embezzled\\public funds}}}}T_t-T_t\\
+c_t+i^p_t&\leq \left( r^p_t+(1-\delta^p) \right)k^p_t +w^p_t n_t^p+\underbrace{w^g_t (1-\rho(e_t))n^g_t}_{\textrm{\parbox{1.1in}{\shortstack{net pay earned in\\public sector}}}}+\underbrace{\left( \exp\left\lbrace \bar{l}e_tn^g_t \right\rbrace-1 \right)}_{\textrm{\parbox{1.1in}{\shortstack{portion of embezzled\\public funds}}}}T_t-T_t \label{eq:intratempBC}\\
 n_t^p&= hn_t,\qquad n_t^g=sn_t,\qquad h+s=1, \qquad n_t+l_t=1\\
-k^p_{t+1}&=i^p_t+(1-\delta^p)k_t^p +i^f_t\\
+k^p_{t+1}&=i^p_t+(1-\delta^p)k_t^p +i^f_t \label{eq:capital}\\
 \rho(e_t)&=\text{\textcolor{red}{\sout{$ a_t $}}}~\bar{\rho}e_t^2 \qquad \textit{\footnotesize probability that a public servant is fired for being corrupt}\\
 e_t&\in\left[ 0,1 \right], \qquad \bar{\rho}\in[0,1]\Rightarrow \rho(e_t)\in[0,1]
 \end{align}
 where $ n^p_t $ and $ w^p_t $ denote labour and wage in the private sector, while $ n^g_t $ and $ w^g_t  $ are the respective ones in the public sector. The portion of workers in either sector is exogenous, where those in the private are $ h $ of the total labour force, and those in the public sector are $ s=1-h $. As a "no-arbitrage" condition, it will be imposed that the wages are equal in both sectors, since if a public servant accepts a $ w_t^g<w_t^p $ he would reveal himself as being corrupt and never hired to begin with. Then, the optimal thing for the government would be to set the public servants at a pay of their outside option, i.e. $ w_t^g=w_t^p $.\\ $ T_t $ are total lump sum taxes.
 % and $ TR_t $ are the net\footnote{after auditing as will later be shown} governmental revenues.
 \\\\
-Additionally, workers in the public sector can spend a portion $ e_t $ of their working time in rent seeking (i.e. embezzling public funds for personal benefit), so that they can appropriate a fraction $ l(e_tn^g_t)=\left( exp\left\lbrace \bar{l}e_tn^g_t \right\rbrace-1 \right) $ of $ TR_t $. Note that $ \bar{l}>0 $ is a corruption weight that will later be exogenously varied in order to represent different governmental policies/characteristics that alter the degree of easiness of being corrupt. Also, $ l(0)=0,~l'(\cdot)>0\text{ and } l''(\cdot)>0 $, implying that if no time is spent on rent seeking, no embezzlement occurs, and that the embezzlement efficiency function is convex in the time spent rent seeking. Nonetheless, there is a $ \rho(e_t)=\bar{\rho}e_t^2 $ (where $ \bar{\rho} $ is the auditing effectiveness of the government - see below) probability that a public servant is caught for embezzlement and is hence fired - that is receives no salary, thus in expectation his net salary is $ w^g_t (1-\rho(e_t))n^g_t $. Observe also that similarly to the embezzlement function $ \rho(0)=0,~\rho'(\cdot)>0 $, and $ \rho''(\cdot)>0 $. \\\\
+Additionally, workers in the public sector can spend a portion $ e_t $ of their working time in rent seeking (i.e. embezzling public funds for personal benefit), so that they can appropriate a fraction $ l(e_tn^g_t)=\left( \exp\left\lbrace \bar{l}e_tn^g_t \right\rbrace-1 \right) $ of $ TR_t $. Note that $ \bar{l}>0 $ is a corruption weight that will later be exogenously varied in order to represent different governmental policies/characteristics that alter the degree of easiness of being corrupt. Also, $ l(0)=0,~l'(\cdot)>0\text{ and } l''(\cdot)>0 $, implying that if no time is spent on rent seeking, no embezzlement occurs, and that the embezzlement efficiency function is convex in the time spent rent seeking. Nonetheless, there is a $ \rho(e_t)=\bar{\rho}e_t^2 $ (where $ \bar{\rho} $ is the auditing effectiveness of the government - see below) probability that a public servant is caught for embezzlement and is hence fired - that is receives no salary, thus in expectation his net salary is $ w^g_t (1-\rho(e_t))n^g_t $. Observe also that similarly to the embezzlement function $ \rho(0)=0,~\rho'(\cdot)>0 $, and $ \rho''(\cdot)>0 $. \\\\
 Lastly, $ i^f_t $ is the foreign direct investment (FDI) that has the following law of motion:
 \begin{equation}
 \text{FDI:}\qquad i^f_t=\bar{i}^f+\gamma\left( \frac{g_t}{y_t} \right)^\psi+\varepsilon_t~, \qquad \gamma,\psi>0
@@ -63,14 +63,24 @@ In order of preference:
 \item Does ``workers in the public sector can spend a portion $ e_t $ of their working time...'' mean that $e_t \in [0,1]$?
 \begin{itemize}
 \item \textcolor{blue}{\textit{Yes (added)}}
+\item \textcolor{red}{\textit{Great! You can delete this question in the next version of the text.}}
 \end{itemize}
 \item Why does the household's budget constraint contain the term $ (1-\delta^p)k^p_t $?
 \begin{itemize}
 \item \textcolor{blue}{\textit{HHs own the capital, which in turn depreciates at rate $ \delta^p $ every period. HHs also earn rent on capital, hence the term $ r^p_t k_t^p $}}
+\item \textcolor{red}{\textit{I understand the inclusion of the term $ r^p_t k^p_t $, as the rent on capital is a source of income for HHs. However, the inclusion of $ (1-\delta^p)k^p_t $ still puzzles me. It would imply that each period HHs receive an income stream equal to the undepreciated part of the capital stock. Under the current setup, substituting \eqref{eq:capital} into \eqref{eq:intratempBC} would imply \begin{equation*}
+\begin{split}
+c_t+2i^p_t+i^f_t\leq & r^p_t k^p_t+ k^p_{t+1} +  
+w^p_t n_t^p+w^g_t (1-\rho(e_t))n^g_t+\\
+& \left( \exp\left\lbrace \bar{l}e_tn^g_t \right\rbrace-1 \right)T_t-T_t ,
+\end{split}
+\end{equation*}which I find hard to interpret. Given that, I'd recommend deleting the term $ (1-\delta^p)k^p_t $ from equation \eqref{eq:intratempBC}, unless you have additional considerations to share.
+}}
 \end{itemize}
 \item Can we verify that $ \rho(e_t) \in [0,1] $?
 \begin{itemize}
 \item \textcolor{blue}{\textit{Good point. It is fixed now.\\ Since the auditing parameter $ \bar{\rho} $ will be varied exogenously, it makes no sense to have taxes (through $ a_t $) in the discovery probability $ \rho(e_t) $. Thus the latter becomes $ \rho(e_t)=\bar{\rho}e_t^2~\in[0,1] $. Again, the auditing expenditures $ a_t $ are assumed to be absorbed by the discovery probability and have no other general equilibrium effects (i.e. they are part of the government consumption that is "thrown in the ocean")}}
+\item \textcolor{red}{\textit{This is one option. However, it has the disadvantage that auditing expenditures are lost. Just an idea: how about using $F(a_t)$ instead of $\bar{\rho}$, where $ F(\cdot) $ is the CDF of the gamma distribution? It will still be constrained to lie in the $ [0,1] $ interval but will provide a role for $a_t$.}}
 \end{itemize}
 \item Public sector specification
 
@@ -92,12 +102,14 @@ Ideally, the government gets $ p^g_t g_t + T_t $. This can be written as \[  p^g
 \begin{itemize}
 \item \textit{\textcolor{blue}{In the critiqued version, the assumption of the timing was that the government receives $ T $ in taxes, $ a_t=\bar{\rho}T $ of which are directly allocated to auditing (before corruption is realized). After auditing and embezzlement the net tax income is $ (1-l(e_t n_t^g))(1-\bar{\rho}) T_t $. The auditing expenditures are absorbed by the auditing procedure itself which influences the probability of exposure of corrupt public workers $ \rightarrow \rho(e_t)=\bar{\rho}e_t^2$. That is, they exit the resource part of the economy.}}
 \item \textcolor{blue}{\textit{Now, auditing expenditures still exit the resource part of the economy. Yet, the timing is assumed differently. Since it is not realistic that the government can protect \textbf{only} the auditing funds from corruption (because then: why don't they claim everything is for auditing and then reallocate the tax revenues, thus avoiding corruption all together?!), then here corruption is realized before auditing expenditures take place. This implies that the variable $ TR_t $ is redundant (it is simply equal to $ T_t $) and hence omitted. The auditing expenditure then is $ a_t= \bar{\rho}\left[ 1-l\left( e_tn_t^g \right) \right]T_t $ and the new net tax revenues are $ \left[ 1-l\left( e_tn_t^g \right) \right]T_t $}}
+\item \textcolor{red}{\textit{OK. I'm fine with this now. You can delete this question in the next version.}}
 \end{itemize}
 \item If workers get $ w^g_t (1-\rho(e_t))n^g_t $ from the government, isn't it logical to have the same amount as government expenditures instead of $ w_t^g n_t^g $? Otherwise the government discovers embezzlers but still pays them.
 \begin{itemize}
 \item \textcolor{blue}{\textit{In general, it depends on the assumption of the nature of the public servants' contracts. Yet, I agree that it is more natural to assume the government does not pay the uncovered embezzlers $ \Rightarrow $ fixed.}}
 \item \textcolor{blue}{\textit{Litina \& Palivos (2011) compare this extreme case of "throwing the politician out of office" and compare it to their benchmark where the politician only pays a proportional fee to the embezzled amount once discovered. They conclude that both approaches yield similar qualitative conclusions. Thus, I will stick to the "lay off the corrupt workers" approach.}}
 \item \textcolor{blue}{\textit{In fact, introducing $ w^g_t (1-\rho(e_t))n^g_t $ in the government budget constraint may result in more interesting role for the auditing effectiveness parameter $ \bar{\rho} $, since $ \frac{\partial a_t}{\partial \bar{\rho}}\geq 0 $ but $ \frac{\partial w^g_t (1-\rho(e_t))n^g_t}{\partial \bar{\rho}}\leq0 $, hence introducing a trade-off.}}
+\item \textcolor{red}{\textit{OK. I'm fine with this now. You can delete this question in the next version.}}
 \end{itemize}
 
 \end{itemize}
@@ -106,6 +118,7 @@ Ideally, the government gets $ p^g_t g_t + T_t $. This can be written as \[  p^g
 Assuming nonzero values of $ g_t $ and $ y_t $ in equilibrium, say $ \bar{g} $ and $ \bar{y} $, the steady state value of $ i^f_t $ will be $ \bar{i}^f + \gamma \left(\frac{\bar{g}}{\bar{y}}\right)^{\psi} $, not $ \bar{i}^f $.
 \begin{itemize}
 \item \textcolor{blue}{\textit{True, it was a poor expression. This term is meant as an exogenous drift term that does not depend on the domestic public sector.}}
+\item \textcolor{red}{\textit{OK. We'll have to see if it creates any complications as far as the existence of a steady state is concerned. You can delete this question in the next version.}}
 \end{itemize}
 \end{enumerate}
 
